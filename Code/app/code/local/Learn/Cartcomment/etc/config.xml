@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Learn_Cartcomment>
+            <version>1.0.1</version>
+        </Learn_Cartcomment>
+    </modules>
+    
+    <frontend>
+		<layout>
+			<updates>
+				<cartcomment>
+					<file>learn/cartcomment.xml</file>
+				</cartcomment>
+			</updates>
+		</layout>
+	</frontend>
+
+    <global>    
+
+		<helpers>
+			<cartcomment>
+				<class>Learn_Cartcomment_Helper</class>
+			</cartcomment>
+		</helpers>
+
+		<models>
+			<cartcomment>
+				<class>Learn_Cartcomment_Model</class>
+			</cartcomment>
+            <checkout>
+                <rewrite>
+                    <cart>Learn_Cartcomment_Model_Cart</cart>
+                </rewrite>
+            </checkout>
+		</models> 
+
+        <fieldsets>
+            <sales_convert_quote_item>
+                <itemcomment>
+                    <to_order_item>*</to_order_item>
+                </itemcomment>
+            </sales_convert_quote_item>
+            
+            <sales_convert_order_item>
+                <itemcomment>
+                    <to_quote_item>*</to_quote_item>
+                    <to_invoice_item>*</to_invoice_item>
+                    <to_shipment_item>*</to_shipment_item>
+                    <to_cm_item>*</to_cm_item>
+                </itemcomment>
+            </sales_convert_order_item>
+        </fieldsets>
+        
+        <resources>
+            <cartcomment_setup>
+                <setup>
+                    <module>Learn_Cartcomment</module>
+                </setup>
+            </cartcomment_setup>
+        </resources>
+    </global>
+      
+	<adminhtml>
+		<layout>
+			<updates>
+				<cartcomment module="cartcomment">
+					<file>learn/cartcomment.xml</file>
+				</cartcomment>
+			</updates>
+		</layout>
+	</adminhtml>
+    
+	<default>
+		<cartcomment_tab>
+			<cartcomment_setting>
+				<cartcomment_active>1</cartcomment_active>
+            </cartcomment_setting>
+		</cartcomment_tab>
+	</default>
+</config>

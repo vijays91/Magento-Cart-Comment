@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_sales_order_view>
+        <reference name="order_tab_info">
+            <reference name="order_items">
+                <action method="setTemplate">
+                    <value>cartcomment/sales/order/view/items.phtml</value>
+                </action>                
+                <action method="addItemRender">
+                    <type>default</type>
+                    <block>adminhtml/sales_order_view_items_renderer_default</block>
+                    <template>cartcomment/sales/order/view/items/renderer/default.phtml</template>
+                </action>
+            </reference>
+        </reference>
+    </adminhtml_sales_order_view>
+    
+    <!--   Creditmemo  -->
+    <adminhtml_sales_order_creditmemo_new>
+        <reference name="order_items">
+            <action method="setTemplate">
+                <value>cartcomment/sales/order/creditmemo/create/items.phtml</value>
+            </action>
+            <action method="addItemRender">
+                <type>default</type>
+                <block>adminhtml/sales_items_renderer_default</block>
+                <template>cartcomment/sales/order/creditmemo/create/items/renderer/default.phtml</template>
+            </action>
+        </reference>    
+    </adminhtml_sales_order_creditmemo_new>
+    
+    <adminhtml_sales_order_creditmemo_view>
+        <reference name="creditmemo_items">
+            <action method="setTemplate">
+                <value>cartcomment/sales/order/creditmemo/view/items.phtml</value>
+            </action>
+            <action method="addItemRender">
+                <type>default</type>
+                <block>adminhtml/sales_items_renderer_default</block>
+                <template>cartcomment/sales/order/creditmemo/view/items/renderer/default.phtml</template>
+            </action>
+        </reference>  
+    </adminhtml_sales_order_creditmemo_view>
+    
+    
+    <!--   Shipment  -->
+    <adminhtml_sales_order_shipment_new>
+        <reference name="order_items">
+            <action method="setTemplate">
+                <value>cartcomment/sales/order/shipment/create/items.phtml</value>
+            </action>
+            <action method="addItemRender">
+                <type>default</type>
+                <block>adminhtml/sales_items_renderer_default</block>
+                <template>cartcomment/sales/order/shipment/create/items/renderer/default.phtml</template>
+            </action>
+        </reference>    
+    </adminhtml_sales_order_shipment_new>
+    
+    <adminhtml_sales_order_shipment_view>
+        <reference name="shipment_items">
+            <action method="setTemplate">
+                <value>cartcomment/sales/order/shipment/view/items.phtml</value>
+            </action>
+            <action method="addItemRender">
+                <type>default</type>
+                <block>adminhtml/sales_items_renderer_default</block>
+                <template>cartcomment/sales/order/shipment/view/items/renderer/default.phtml</template>
+            </action>
+        </reference> 
+    </adminhtml_sales_order_shipment_view>
+    
+    <!-- Invoice -->
+    <adminhtml_sales_order_invoice_new>
+        <reference name="order_items">
+            <action method="setTemplate">
+                <value>cartcomment/sales/order/invoice/create/items.phtml</value>
+            </action>
+            <action method="addItemRender">
+                <type>default</type>
+                <block>adminhtml/sales_items_renderer_default</block>
+                <template>cartcomment/sales/order/invoice/create/items/renderer/default.phtml</template>
+            </action>
+        </reference>
+    </adminhtml_sales_order_invoice_new>
+
+    <adminhtml_sales_order_invoice_view>
+        <reference name="invoice_items">
+            <action method="setTemplate">
+                <value>cartcomment/sales/order/invoice/view/items.phtml</value>
+            </action>                
+            <action method="addItemRender">
+                <type>default</type>
+                <block>adminhtml/sales_items_renderer_default</block>
+                <template>cartcomment/sales/order/invoice/view/items/renderer/default.phtml</template>
+            </action>
+        </reference>
+    </adminhtml_sales_order_invoice_view>
+
+</layout>
